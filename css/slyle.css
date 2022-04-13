@@ -249,7 +249,7 @@ button {
    margin-bottom: 0;
 }
 .design__interior-img {
-   max-width: none;
+   grid-column: 2/-1;
 }
 .design__cell-three {
    grid-row-end: -1;
@@ -296,12 +296,119 @@ button {
 .design__img{
    object-fit: cover;
    margin: 0 auto;
+   transform: translateY(3px);
 }
 /* FOOTER ===========================================*/
-
+.footer {
+   padding: 130px 0;
+}
 .footer__inner {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   height: 300px;
+}
+
+/* ADAPTIVE======================= */
+@media(max-width: 1020px) {
+   .design__interior {
+      display: block;
+   }
+   .design__interior-img {
+      width: 100%;
+      margin: 25px 0;
+   }
+   .design__cell-three .design__interior-img {
+      max-width: 100%;
+      width: auto;
+   }
+   .design__interior {
+      margin-bottom: 25px;
+   }
+}
+
+@media(max-width: 768px) {
+   .page {
+      padding: 55px 0;
+   }
+   .header__logo {
+      margin-left: 0;
+   }
+   .logo__img {
+      width: 180px;
+   }
+   .list__link {
+      width: 35px;
+      height: 35px;
+   }
+   .list__item:not(:last-child) {
+      margin-right: 15px;
+   }
+   .header__title {
+      font-size: 55px;
+   }
+   .header__description {
+      font-size: 18px;
+   }
+   .concept__text {
+      font-size: 16px;
+   }
+   .premier__inner {
+      display: block;
+   }
+   .premier__img {
+      width: 100%;
+      margin-top: 25px;
+   }
+   .design__box {
+      margin: 55px auto;
+      display: block;
+      width: 100%;
+   }
+   .design__box-column {
+      width: 100%;
+   }
+   .design {
+      padding-bottom: 0;
+   }
+}
+@media(max-width: 620px) {
+   .footer {
+      padding: 25px 0;
+   }
+   .footer__inner {
+      flex-wrap: wrap;
+      align-content: center;
+   }
+}
+@media(max-width: 520px) {
+   .header__top {
+      flex-wrap: wrap;
+      align-content: center;
+   }
+   .list {
+      width: 100%;
+      padding-top: 10px;
+      justify-content: center;
+   }
+   .header__title {
+      font-size: 34px;
+   }
+   .footer__link {
+      order: 1;
+      font-size: 10px;
+   }
+   .footer__inner {
+      justify-content: space-around;
+   }
+   .footer__inner .list {
+      padding: 10px 0;
+   }
+}
+@media(max-width: 360px) {
+   .design__slider-item {
+      margin: 0;
+   }
+   .slick-track {
+      margin-left: 0;
+   }
 }
